@@ -14,89 +14,64 @@
             height: 100vh;
             margin: 0;
             padding: 20px;
-            box-sizing: border-box;
-            overflow-y: auto;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 900px;
+            width: 100%;
         }
         .note-container {
-            position: relative;
             background: white;
-            padding: 30px;
-            width: 80%;
-            max-width: 700px;
+            padding: 20px;
+            width: 60%;
             border: 2px solid pink;
-            text-align: center;
+            text-align: left;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
+            border-radius: 10px;
         }
         .note-container h1 {
             font-family: "Lucida Calligraphy", cursive;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #d63384;
-            margin-top: 20px; /* Ensures title is visible */
+            text-align: center;
         }
         .note-container p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.5;
-            text-align: left;
         }
         .qr-code {
+            text-align: center;
             margin-top: 20px;
         }
-        .bow {
-            position: absolute;
-            width: 50px;
-        }
-        /* Ensure the bows are inside the note container */
-        .top-left { top: -20px; left: -20px; }
-        .top-right { top: -20px; right: -20px; }
-        .bottom-left { bottom: -20px; left: -20px; }
-        .bottom-right { bottom: -20px; right: -20px; }
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .note-container {
-                width: 90%;
-                padding: 20px;
-            }
-            .note-container h1 {
-                font-size: 2rem;
-            }
-            .note-container p {
-                font-size: 1rem;
-            }
+        .audio-container {
+            width: 35%;
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="note-container">
-        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow top-left" alt="Pink Bow">
-        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow top-right" alt="Pink Bow">
-        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow bottom-left" alt="Pink Bow">
-        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow bottom-right" alt="Pink Bow">
-        
-        <h1>For Omali</h1>
-        <p>Hi Omali, this is a playlist of about 150+ songs that at some point in my life have meant something.</p>
-        <p>In it you'll find all kinds of music, some I shazamed because I heard it on the radio, some I heard in a video game, some in movies, some I just discovered and some of it you know. Some of it inspired me, some made me sad, some got me through dark moments, some made me dance, some made me think, but the one thing each of them have in common is that there's a story attached to each one. Probably not a very interesting story but still, some story. They all take me back to some point in my life and for me that is why music exists, it speaks for you and helps you relive moments without you saying a word.</p>
-        <p>I want to share it all with you, I'll be adding more to it as I remember. Don't feel pressured into listening to it all ASAP lol. It's not really about the music as much as it's about the fact that I think you're special enough for me to share this with you. I think what a person listens to says something about them. So as you listen, when you can, remember that you're very special to me, very amazing and I have zero reservations letting you into this part of my life that almost nobody knows. I'm probably beginning to like you in ways that my words can't express anymore, so maybe the music will.</p>
-        <p>I hope you appreciate it. And feel free to ask me anything.</p>
-        <p>Yours,<br>BT</p>
-        <p>PS: they're not love songs lol, some are crazy, some are downright weird, some will make you ask wtf is this lol. But they're all just songs that I loved at some point, however briefly, so I hope you can find some enjoyment in it lol.</p>
-        
-        <div class="qr-code">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://open.spotify.com/playlist/5DuRcbNJNLTDxh38Rt1kJU?si=-IH3kFf-TqqdzEn5kxY61g" alt="QR Code">
+    <div class="container">
+        <div class="note-container">
+            <h1>For Omali</h1>
+            <p>Hi Omali, this is a playlist of about 150+ songs that at some point in my life have meant something. </p>
+            <p>In it you'll find all kinds of music, some I shazamed because I heard it on the radio, some I heard in a video game, some in movies, some I just discovered and some of it you know. Some of it inspired me, some made me sad, some got me through dark moments, some made me dance, some made me think, but the one thing each of them have in common is that there's a story attached to each one. Probably not a very interesting story but still, some story. They all take me back to some point in my life and for me that is why music exists, it speaks for you and helps you relive moments without you saying a word.</p>
+            <p>I want to share it all with you, I'll be adding more to it as I remember. Don't feel pressured into listening to it all ASAP lol. It's not really about the music as much as it's about the fact that I think you're special enough for me to share this with you. I think what a person listens to says something about them. So as you listen, when you can, remember that you're very special to me, very amazing and I have zero reservations letting you into this part of my life that almost nobody knows. I'm probably beginning to like you in ways that my words can't express anymore, so maybe the music will.</p>
+            <p>I hope you appreciate it. And feel free to ask me anything.</p>
+            <p><b>Yours,</b><br>BT</p>
+            <p><b>P.S.</b> They're not love songs lol, some are crazy, some are downright weird, some will make you ask wtf is this lol. But they're all just songs that I loved at some point, however briefly, so I hope you can find some enjoyment in it lol.</p>
+            <div class="qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://open.spotify.com/playlist/5DuRcbNJNLTDxh38Rt1kJU?si=-IH3kFf-TqqdzEn5kxY61g" alt="QR Code">
+            </div>
         </div>
-        
-        <!-- SoundCloud Embed -->
-        <div style="margin-top: 20px;">
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" 
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2034927676&color=ff5500">
-            </iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; 
-                font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/jachike-okoye" title="Jachike Okoye" target="_blank" 
-                   style="color: #cccccc; text-decoration: none;">Jachike Okoye</a> · 
-                <a href="https://soundcloud.com/jachike-okoye/voice-007-online-audio" 
-                   title="Voice 007 (online-audio-converter.com)" target="_blank" 
-                   style="color: #cccccc; text-decoration: none;">Voice 007 (online-audio-converter.com)</a>
+        <div class="audio-container">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2034927676&color=ff5500"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/jachike-okoye" title="Jachike Okoye" target="_blank" style="color: #cccccc; text-decoration: none;">Jachike Okoye</a> · 
+                <a href="https://soundcloud.com/jachike-okoye/voice-007-online-audio" title="Voice 007 (online-audio-converter.com)" target="_blank" style="color: #cccccc; text-decoration: none;">Voice 007 (online-audio-converter.com)</a>
             </div>
         </div>
     </div>
