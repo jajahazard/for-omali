@@ -14,6 +14,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 20px;
             text-align: center;
         }
         .note-container {
@@ -25,6 +26,7 @@
             border: 2px solid pink;
             text-align: left;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px; /* Added spacing so header isn't cut off */
         }
         .note-container h1 {
             font-family: "Lucida Calligraphy", cursive;
@@ -87,10 +89,11 @@
 
     <!-- Background Music Player -->
     <div class="music-controls">
-        <audio id="backgroundMusic" src="https://jmp.sh/s/dCiD7UJNvn70saHwUN4V"></audio>
-        <button onclick="playMusic()">Play</button>
-        <button onclick="pauseMusic()">Pause</button>
-        <button onclick="stopMusic()">Stop</button>
+        <!-- Alternative Methods for Playing Audio -->
+        <audio id="backgroundMusic" controls>
+            <source src="https://YOUR_AUDIO_LINK_HERE.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <script>
