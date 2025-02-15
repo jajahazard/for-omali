@@ -14,7 +14,7 @@
             height: 100vh;
             margin: 0;
             flex-direction: column;
-            text-align: center;
+            padding: 20px;
         }
         .note-container {
             position: relative;
@@ -23,8 +23,9 @@
             width: 90%;
             max-width: 700px;
             border: 2px solid pink;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
         .note-container h1 {
             font-family: "Lucida Calligraphy", cursive;
@@ -33,7 +34,7 @@
         }
         .note-container p {
             font-size: 1rem;
-            line-height: 1.5;
+            line-height: 1.6;
             text-align: left;
         }
         .qr-code {
@@ -41,75 +42,64 @@
         }
         .bow {
             position: absolute;
-            width: 50px;
-        }
-        /* Responsive styles for mobile */
-        @media (max-width: 600px) {
-            .note-container {
-                width: 90%;
-                padding: 15px;
-            }
-            .note-container h1 {
-                font-size: 1.8rem;
-            }
-            .note-container p {
-                font-size: 0.9rem;
-            }
-            .bow {
-                width: 40px; /* Reduce bow size on smaller screens */
-            }
+            width: 40px;
         }
         .top-left { top: -20px; left: -20px; }
         .top-right { top: -20px; right: -20px; }
         .bottom-left { bottom: -20px; left: -20px; }
         .bottom-right { bottom: -20px; right: -20px; }
-        
-        /* Styling for the music player */
-        .music-container {
+        .audio-controls {
             margin-top: 20px;
+            text-align: center;
+        }
+        .audio-controls button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #d63384;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .audio-controls button:hover {
+            background-color: #b0256b;
         }
     </style>
 </head>
 <body>
-
     <div class="note-container">
         <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow top-left" alt="Pink Bow">
         <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow top-right" alt="Pink Bow">
-        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow bottom-left" alt="Pink Bow">
-        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow bottom-right" alt="Pink Bow">
-        
         <h1>For Omali</h1>
         <p>Hi Omali, this is a playlist of about 150+ songs that at some point in my life have meant something.</p>
-        <p>In it you'll find all kinds of music, some I shazamed because I heard it on the radio, some I heard in a video game, some in movies, some I just discovered and some of it you know. Some of it inspired me, some made me sad, some got me through dark moments, some made me dance, some made me think, but the one thing each of them have in common is that there's a story attached to each one.</p>
-        <p>I want to share it all with you, I'll be adding more to it as I remember. Don't feel pressured into listening to it all ASAP lol.</p>
-        <p>Yours,<br>BT</p>
-        <p>PS: They're not love songs lol, some are crazy, some are downright weird. But I hope you find some enjoyment in it.</p>
-
+        <p>In it you'll find all kinds of music, some I shazamed because I heard it on the radio, some I heard in a video game, some in movies, some I just discovered and some of it you know. Some of it inspired me, some made me sad, some got me through dark moments, some made me dance, some made me think, but the one thing each of them have in common is that there's a story attached to each one. Probably not a very interesting story but still, some story. They all take me back to some point in my life and for me that is why music exists, it speaks for you and helps you relive moments without you saying a word.</p>
+        <p>I want to share it all with you, I'll be adding more to it as I remember. Don't feel pressured into listening to it all ASAP lol. It's not really about the music as much as it's about the fact that I think you're special enough for me to share this with you. I think what a person listens to says something about them. So as you listen, when you can, remember that you're very special to me, very amazing and I have zero reservations letting you into this part of my life that almost nobody knows. I'm probably beginning to like you in ways that my words can't express anymore, so maybe the music will.</p>
+        <p>I hope you appreciate it. And feel free to ask me anything.</p>
+        <p>Yours,</p>
+        <p>BT</p>
+        <p>PS: they're not love songs lol, some are crazy, some are downright weird, some will make you ask wtf is this lol. But they're all just songs that I loved at some point, however briefly, so I hope you can find some enjoyment in it lol.</p>
         <div class="qr-code">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://open.spotify.com/playlist/5DuRcbNJNLTDxh38Rt1kJU?si=-IH3kFf-TqqdzEn5kxY61g" alt="QR Code">
         </div>
     </div>
-
-    <!-- Background Music -->
-    <div class="music-container">
-        <audio id="background-music" loop>
-            <source src="your-music-file.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <button onclick="toggleMusic()">Play/Pause Music</button>
+    <div class="audio-controls">
+        <audio id="bg-music" src="https://jmp.sh/s/dCiD7UJNvn70saHwUN4V"></audio>
+        <button onclick="playMusic()">Play</button>
+        <button onclick="pauseMusic()">Pause</button>
+        <button onclick="stopMusic()">Stop</button>
     </div>
-
     <script>
-        const music = document.getElementById("background-music");
-
-        function toggleMusic() {
-            if (music.paused) {
-                music.play();
-            } else {
-                music.pause();
-            }
+        var audio = document.getElementById("bg-music");
+        function playMusic() {
+            audio.play();
+        }
+        function pauseMusic() {
+            audio.pause();
+        }
+        function stopMusic() {
+            audio.pause();
+            audio.currentTime = 0;
         }
     </script>
-
 </body>
 </html>
