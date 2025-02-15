@@ -2,7 +2,7 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh19380\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh21000\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 <!DOCTYPE html>\
@@ -13,66 +13,64 @@
     <title>For Omali</title>\
     <style>\
         body \{\
-            background-color: #fff0f6;\
+            background-color: #fff0f5;\
+            font-family: "Times New Roman", serif;\
             display: flex;\
             justify-content: center;\
             align-items: center;\
             height: 100vh;\
-            flex-direction: column;\
-            text-align: center;\
-            font-family: 'Cursive', serif;\
+            margin: 0;\
         \}\
-        .header \{\
-            font-size: 36px;\
-            color: pink;\
-            font-family: 'Cursive', serif;\
-            margin-bottom: 20px;\
-        \}\
-        .note \{\
-            background: white;\
-            padding: 20px;\
-            width: 50%;\
-            border-radius: 15px;\
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);\
+        .note-container \{\
             position: relative;\
-            border: 3px solid pink;\
+            background: white;\
+            padding: 30px;\
+            width: 60%;\
+            max-width: 700px;\
+            border: 2px solid pink;\
+            text-align: center;\
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);\
         \}\
-        .note::before, .note::after \{\
-            content: '\\1F380'; /* Unicode for pink bow */\
-            font-size: 30px;\
-            position: absolute;\
+        .note-container h1 \{\
+            font-family: "Lucida Calligraphy", cursive;\
+            font-size: 2.5rem;\
+            color: #d63384;\
         \}\
-        .note::before \{\
-            top: -20px;\
-            left: -20px;\
-        \}\
-        .note::after \{\
-            bottom: -20px;\
-            right: -20px;\
+        .note-container p \{\
+            font-size: 1.1rem;\
+            line-height: 1.5;\
+            text-align: left;\
         \}\
         .qr-code \{\
             margin-top: 20px;\
         \}\
-        audio \{\
-            display: none;\
+        .bow \{\
+            position: absolute;\
+            width: 50px;\
         \}\
+        .top-left \{ top: -20px; left: -20px; \}\
+        .top-right \{ top: -20px; right: -20px; \}\
+        .bottom-left \{ bottom: -20px; left: -20px; \}\
+        .bottom-right \{ bottom: -20px; right: -20px; \}\
     </style>\
 </head>\
 <body>\
-    <div class="header">For Omali</div>\
-    <div class="note">\
+    <div class="note-container">\
+        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow top-left" alt="Pink Bow">\
+        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow top-right" alt="Pink Bow">\
+        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow bottom-left" alt="Pink Bow">\
+        <img src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Ribbons-and-Banners-PNG/Decorative_Pink_Bow_Corner_Transparent_PNG_Clip_Art_Image.png?m=1449978901" class="bow bottom-right" alt="Pink Bow">\
+        <h1>For Omali</h1>\
         <p>Hi Omali, this is a playlist of about 150+ songs that at some point in my life have meant something.</p>\
-        <p>In it you'll find all kinds of music, some I shazamed because I heard it on the radio, some I heard in a video game, some in movies, some I just discovered and some of it you know...</p>\
-        <p>I want to share it all with you...</p>\
+        <p>In it you'll find all kinds of music, some I shazamed because I heard it on the radio, some I heard in a video game, some in movies, some I just discovered and some of it you know. Some of it inspired me, some made me sad, some got me through dark moments, some made me dance, some made me think, but the one thing each of them have in common is that there's a story attached to each one. Probably not a very interesting story but still, some story. They all take me back to some point in my life and for me that is why music exists, it speaks for you and helps you relive moments without you saying a word.</p>\
+        <p>I want to share it all with you, I'll be adding more to it as I remember. Don't feel pressured into listening to it all ASAP lol. It's not really about the music as much as it's about the fact that I think you're special enough for me to share this with you. I think what a person listens to says something about them. So as you listen, when you can, remember that you're very special to me, very amazing and I have zero reservations letting you into this part of my life that almost nobody knows. I'm probably beginning to like you in ways that my words can't express anymore, so maybe the music will.</p>\
+        <p>I hope you appreciate it. And feel free to ask me anything.</p>\
         <p>Yours,<br>BT</p>\
-        <p>PS: They're not love songs lol...</p>\
+        <p>PS: they're not love songs lol, some are crazy, some are downright weird, some will make you ask wtf is this lol. But they're all just songs that I loved at some point, however briefly, so I hope you can find some enjoyment in it lol.</p>\
+        <div class="qr-code">\
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://open.spotify.com/playlist/5DuRcbNJNLTDxh38Rt1kJU?si=-IH3kFf-TqqdzEn5kxY61g" alt="QR Code">\
+        </div>\
     </div>\
-    <div class="qr-code">\
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://open.spotify.com/playlist/5DuRcbNJNLTDxh38Rt1kJU?si=-IH3kFf-TqqdzEn5kxY61g&pt=be4e062755ab953c28a753f1d8a13894" alt="QR Code">\
-    </div>\
-    <audio autoplay loop>\
-        <source src="https://www.example.com/wicked-game.mp3" type="audio/mpeg">\
-    </audio>\
 </body>\
 </html>\
 }
